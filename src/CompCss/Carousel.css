@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Carousel Container */
+  .carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 20px auto;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+  }
+  
+  .carousel-slide {
+    min-width: 100%; /* Each slide takes up the full width */
+    box-sizing: border-box;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Navigation Buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .carousel-btn:hover {
+    opacity: 1;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  /* Indicators */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .indicator.active {
+    background-color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .carousel-btn {
+      font-size: 1.5rem;
+      padding: 8px;
+    }
+  
+    .carousel-indicators {
+      gap: 6px;
+    }
+  
+    .indicator {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-btn {
+      font-size: 1.2rem;
+      padding: 6px;
+    }
+  
+    .carousel-indicators {
+      gap: 4px;
+    }
+  
+    .indicator {
+      width: 6px;
+      height: 6px;
+    }
+  }

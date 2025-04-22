@@ -16,7 +16,7 @@ const Dashboard = () => {
   console.log("authentication state"+isLoggedIn);
   useEffect(() => {
     const storedToken = localStorage.getItem("token"); // Retrieve token from localStorage
-//  the token is here s
+//   this is the code i have writtern for storetokken 
     if (!storedToken) {
       // navigate("/login"); // Redirect to login if token is missing
     } else {

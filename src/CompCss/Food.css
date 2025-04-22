@@ -1,96 +1,122 @@
-/* Food.css */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9fafb; /* Light gray background */
+  color: #333; /* Dark text color */
+}
+
+/* Page Container */
+.food-page {
+  max-width: 1200px; /* Limits the width for better readability */
+  margin: 0 auto; /* Centers the container */
+  padding: 2rem; /* Adds spacing around the content */
+}
+
+/* Title */
+.food-title {
+  font-size: 2.5rem; /* Large title size */
+  text-align: center; /* Centers the title */
+  margin-bottom: 2rem; /* Adds space below the title */
+  color: #d4a574; /* Warm brown color for a food theme */
+}
+
+/* Blog Grid */
+.food-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 1.5rem; /* Space between blog cards */
+}
+
+/* Blog Card */
+.food-card-item {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensures images don't overflow */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.food-card-item:hover {
+  transform: translateY(-5px); /* Lifts the card slightly on hover */
+}
+
+/* Blog Image */
+.food-card-image {
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures images are scaled properly */
+}
+
+/* Blog Title */
+.food-card-title {
+  font-size: 1.25rem; /* Medium-sized title */
+  font-weight: bold; /* Bold text */
+  margin: 1rem 1rem 0.5rem; /* Spacing around the title */
+  color: #d4a574; /* Matches the title color */
+}
+
+/* Blog Description */
+.food-card-description {
+  margin: 0 1rem 1rem; /* Spacing around the description */
+  font-size: 1rem; /* Standard text size */
+  color: #555; /* Slightly muted text color */
+}
+
+/* Read More Button */
+.food-card-button {
+  display: block; /* Makes the button full-width */
+  width: 100%;
+  padding: 0.75rem; /* Padding inside the button */
+  background-color: #d4a574; /* Matches the theme color */
+  color: #fff; /* White text for contrast */
+  text-align: center; /* Centers the text */
+  font-size: 1rem; /* Standard button text size */
+  font-weight: bold; /* Bold text */
+  border: none; /* Removes default borders */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.food-card-button:hover {
+  background-color: #b88c5f; /* Darker shade for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .food-title {
+    font-size: 2rem; /* Smaller title on medium screens */
   }
-  
-  .food-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+
+  .food-card-item {
+    margin-bottom: 1.5rem; /* Adds spacing between cards */
   }
-  
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+
+  .food-card-image {
+    height: 150px; /* Reduces image height for smaller screens */
   }
-  
-  form {
-    margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+  .food-title {
+    font-size: 1.75rem; /* Even smaller title on small screens */
   }
-  
-  input[type='text'] {
-    padding: 10px;
-    width: 70%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+
+  .food-card-title {
+    font-size: 1rem; /* Smaller title text */
   }
-  
-  button {
-    padding: 10px 20px;
-    margin-left: 10px;
-    border: none;
-    background-color: #ff6f61;
-    color: white;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
+
+  .food-card-description {
+    font-size: 0.9rem; /* Smaller description text */
   }
-  
-  button:hover {
-    background-color: #ff3b2f;
+
+  .food-card-button {
+    font-size: 0.9rem; /* Smaller button text */
   }
-  
-  .recipes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .recipe-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-  
-  .recipe-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .recipe-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .recipe-card h3 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    padding: 0 10px;
-    color: #333;
-  }
-  
-  .recipe-card p {
-    font-size: 0.9rem;
-    color: #666;
-    padding: 0 10px 10px;
-  }
-  
-  @media (max-width: 768px) {
-    input[type='text'] {
-      width: 100%;
-    }
-  
-    button {
-      margin-top: 10px;
-      width: 100%;
-    }
-  }
+}

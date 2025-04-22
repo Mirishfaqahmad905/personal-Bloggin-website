@@ -1,0 +1,185 @@
+
+body {
+  margin-top: 30px;;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Scholarship Container */
+.scholarship-container {
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 2rem;
+}
+
+/* Header Section */
+.scholarship-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.scholarship-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.scholarship-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Scholarship List Section */
+.scholarship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between scholarship items */
+}
+
+/* Individual Scholarship Item */
+.scholarship-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scholarship-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Section */
+.scholarship-image img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensure images are not distorted */
+  display: block;
+}
+
+/* Content Section */
+.scholarship-details {
+  padding: 1.5rem;
+}
+
+.scholarship-details h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.scholarship-details .description {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.scholarship-details .details-list {
+  list-style: none;
+  padding: 0;
+}
+
+.scholarship-details .details-list li {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.scholarship-details .details-list li strong {
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Action Buttons */
+.action-buttons {
+  margin-top: 1rem;
+}
+
+.apply-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #2980b9;
+}
+
+/* Loading Message */
+.loading-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scholarship-header h1 {
+    font-size: 2rem;
+  }
+
+  .scholarship-header p {
+    font-size: 1rem;
+  }
+
+  .scholarship-details h2 {
+    font-size: 1.25rem;
+  }
+
+  .scholarship-details .description {
+    font-size: 0.9rem;
+  }
+
+  .scholarship-details .details-list li {
+    font-size: 0.8rem;
+  }
+
+  .apply-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scholarship-container {
+    padding: 1rem;
+  }
+
+  .scholarship-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .scholarship-header p {
+    font-size: 0.9rem;
+  }
+
+  .scholarship-details h2 {
+    font-size: 1.1rem;
+  }
+
+  .scholarship-details .description {
+    font-size: 0.8rem;
+  }
+
+  .scholarship-details .details-list li {
+    font-size: 0.7rem;
+  }
+
+  .apply-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .scholarship-image img {
+    height: 150px; /* Reduce image height for smaller screens */
+  }
+}

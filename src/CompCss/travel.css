@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9fafb;
+    color: #333;
+  }
+  
+  /* Page Container */
+  .travel-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Title */
+  .travel-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #16a34a; /* Green color for emphasis */
+  }
+  
+  /* Blog Grid */
+  .travel-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Blog Card */
+  .travel-card-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .travel-card-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Blog Image */
+  .travel-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Blog Title */
+  .travel-card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 1rem 1rem 0.5rem;
+    color: #16a34a;
+  }
+  
+  /* Blog Description */
+  .travel-card-description {
+    margin: 0 1rem 1rem;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Read More Button */
+  .travel-card-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #16a34a;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .travel-card-button:hover {
+    background-color: #15803d; /* Darker green on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .travel-title {
+      font-size: 2rem;
+    }
+  
+    .travel-card-item {
+      margin-bottom: 1.5rem;
+    }
+  
+    .travel-card-image {
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .travel-title {
+      font-size: 1.75rem;
+    }
+  
+    .travel-card-title {
+      font-size: 1rem;
+    }
+  
+    .travel-card-description {
+      font-size: 0.9rem;
+    }
+  
+    .travel-card-button {
+      font-size: 0.9rem;
+    }
+  }

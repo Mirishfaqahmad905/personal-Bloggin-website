@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../CompCss/Signup.css'; // Import the CSS file
+const apiUrl = import.meta.env.VITE_API_URL;
+console.log(apiUrl);
 
 const Signup = () => {
   // State to manage form inputs
@@ -9,6 +11,7 @@ const Signup = () => {
     password: '',
     confirmPassword: '',
   });
+  console.log(URL);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -31,7 +34,7 @@ const Signup = () => {
 
     try {
       // Send data to the backend API
-      const response = await fetch('http://localhost:5000/api/signup', {
+      const response = await fetch('http://localhost:3000/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

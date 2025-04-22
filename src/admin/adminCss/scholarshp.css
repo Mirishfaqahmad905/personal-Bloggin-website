@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container Styling */
+.max-w-2xl {
+  max-width: 42rem; /* 672px */
+  margin: 0 auto; /* Center the container */
+  padding: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+/* Heading Styling */
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+/* Input and Label Styling */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem; /* 14px */
+  color: #4a5568;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 6rem;
+}
+
+/* Submit Button Styling */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #4299e1;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3182ce;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .max-w-2xl {
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 1rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 0.875rem; /* Smaller font size for inputs and buttons */
+  }
+
+  label {
+    font-size: 0.75rem; /* Smaller font size for labels */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-2xl {
+    font-size: 1.25rem; /* Reduce heading size further */
+  }
+
+  .mb-6 {
+    margin-bottom: 1rem; /* Reduce spacing */
+  }
+
+  .space-y-4 > * + * {
+    margin-top: 0.75rem; /* Reduce spacing between form elements */
+  }
+
+  input,
+  textarea,
+  button {
+    padding: 0.5rem; /* Reduce padding */
+  }
+}

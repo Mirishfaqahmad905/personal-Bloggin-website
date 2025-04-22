@@ -1,48 +1,48 @@
+
+import '../../CompCss/lifeStyle.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../CompCss/Food.css';
-const Food = () => {
+
+const LifeStyle = () => {
   const [blogs, setBlogs] = useState([]);
   const [expandedBlogIndex, setExpandedBlogIndex] = useState(null);
-  // Fetch food blogs from the backend
+
+  // Fetch blogs from backend
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get('http://localhost:3000/api/bloge');
-        // Filter only food-related blogs
-        const foodBlogs = response.data.filter(
-          (blog) => blog.category.toLowerCase() === 'food'
+        const lifestyleBlogs = response.data.filter(
+          (blog) => blog.category.toLowerCase() === 'lifestyle'
         );
-        setBlogs(foodBlogs);
+        setBlogs(lifestyleBlogs);
       } catch (error) {
         console.error('Error fetching blogs:', error);
       }
     };
     fetchBlogs();
   }, []);
+
   // Toggle expand/collapse
   const toggleExpand = (index) => {
     setExpandedBlogIndex(expandedBlogIndex === index ? null : index);
   };
+
   return (
-    <div className="food-page">
-      <h1 className="food-title">Food Blogs</h1>
-      <div className="food-grid-container">
+    <div className="lifestyle-page">
+      <h1 className="lifestyle-title">Lifestyle Blogs</h1>
+      <div className="lifestyle-grid-container">
         {blogs.map((blog, index) => (
-          <div key={index} className="food-card-item">
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="food-card-image"
-            />
-            <h3 className="food-card-title">{blog.title}</h3>
-            <p className="food-card-description">
+          <div key={index} className="lifestyle-card-item">
+            <img src={blog.image} alt={blog.title} className="lifestyle-card-image" />
+            <h3 className="lifestyle-card-title">{blog.title}</h3>
+            <p className="lifestyle-card-description">
               {expandedBlogIndex === index
                 ? blog.description
                 : `${blog.description.substring(0, 100)}...`}
             </p>
             <button
-              className="food-card-button"
+              className="lifestyle-card-button"
               onClick={() => toggleExpand(index)}
             >
               {expandedBlogIndex === index ? 'Collapse' : 'Read More'}
@@ -54,4 +54,4 @@ const Food = () => {
   );
 };
 
-export default Food;
+export default LifeStyle;

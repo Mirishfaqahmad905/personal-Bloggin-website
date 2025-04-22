@@ -6,21 +6,22 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #f9f9f9;
 }
 
 /* Navbar */
 .navbar_first_dev {
   width: 100%;
-  background-color: #333;
+  background-color: #2c3e50; /* Dark blue for a sleek look */
   color: white;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .navbar_nav {
@@ -28,22 +29,26 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  height: 60px;
+  height: 70px; /* Increased height for better usability */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .navbar_left_bar {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  letter-spacing: 1px; /* Adds spacing between letters for elegance */
+  text-transform: uppercase; /* Uppercase for branding */
 }
 
 .navbar_left_bar a {
   text-decoration: none;
   color: white;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
 }
 
 .navbar_left_bar a:hover {
-  color: #00bcd4;
+  color: #1abc9c; /* Teal color for a modern touch */
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Navbar Right Section */
@@ -61,7 +66,7 @@ body {
 }
 
 .nav_bar_right ul li {
-  margin-left: 20px;
+  margin-left: 25px; /* Increased spacing between menu items */
   position: relative;
 }
 
@@ -69,46 +74,63 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: 500; /* Slightly bolder font for readability */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
 }
 
 .nav_bar_right ul li a:hover {
-  color: #00bcd4;
+  color: #1abc9c; /* Consistent teal color for hover */
+  transform: translateY(-2px); /* Subtle upward movement on hover */
 }
 
 /* Dropdown Menu */
 .category-item {
   cursor: pointer;
+  position: relative;
 }
 
 .category-dropdown {
   position: absolute;
-  top: 100%;
+  top: 100%; /* Positioned below the parent item */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #444;
+  background-color: #34495e; /* Slightly lighter than navbar for contrast */
   list-style: none;
   padding: 10px 0;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
   display: none;
-  min-width: 150px;
+  min-width: 180px;
   z-index: 100;
+  animation: fadeIn 0.3s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .category-dropdown li {
-  padding: 8px 15px;
+  padding: 10px 20px; /* Increased padding for better touch targets */
   text-align: center;
 }
 
 .category-dropdown li a {
   color: white;
   font-size: 0.9rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
 }
 
 .category-dropdown li a:hover {
-  color: #00bcd4;
+  color: #1abc9c; /* Consistent teal color */
+  background-color: #2980b9; /* Background color change on hover */
+  border-radius: 5px; /* Rounded corners for hover effect */
 }
 
 .category-item.active .category-dropdown {
@@ -128,7 +150,8 @@ body {
   height: 3px;
   background-color: white;
   margin: 4px 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Smooth transition for animation */
+  border-radius: 3px; /* Rounded edges for a softer look */
 }
 
 /* Hamburger Animation */
@@ -149,13 +172,13 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 60px;
+  top: 70px; /* Adjusted to match navbar height */
   right: 0;
-  background-color: #333;
+  background-color: #34495e; /* Slightly lighter than navbar */
   width: 100%;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: slideDown 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  animation: slideDown 0.3s ease-in-out; /* Slide-down animation */
 }
 
 @keyframes slideDown {
@@ -175,9 +198,21 @@ body {
 }
 
 .nav_bar_right.active ul li {
-  margin: 10px 0;
+  margin: 12px 0; /* Increased spacing for better readability */
   width: 100%;
   text-align: center;
+}
+
+.nav_bar_right.active ul li a {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners for hover effect */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav_bar_right.active ul li a:hover {
+  background-color: #2980b9; /* Background color change on hover */
+  color: #1abc9c; /* Consistent teal color */
 }
 
 /* Responsive Design */

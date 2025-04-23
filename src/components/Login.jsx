@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../CompCss/Login.css'; // Import the CSS file
-const Url=import.meta.env.VITE_API_URL;
+const Url="https://bloge-3yc3-68bihfv1r-mir-ishfaq-ahmads-projects.vercel.app";
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',

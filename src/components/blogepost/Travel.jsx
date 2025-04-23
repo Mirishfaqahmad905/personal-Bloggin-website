@@ -9,8 +9,7 @@ const Travel = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('personal-blogging-website-2gir.vercel.app
-/api/bloge');
+        const response = await axios.get('https://bloge-3yc3-68bihfv1r-mir-ishfaq-ahmads-projects.vercel.app/api/bloge');
         const travelBlogs = response.data.filter(
           (blog) => blog.category.toLowerCase() === 'travel'
         );

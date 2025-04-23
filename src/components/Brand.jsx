@@ -4,7 +4,8 @@ import '../CompCss/Brand.css';
 const Brand = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3000/api/bloge')
+        axios.get('personal-blogging-website-2gir.vercel.app
+/api/bloge')
             .then((res) => {
                 const filteredData = res.data.filter(item => item.category === "Brand"); // Ensure correct casing
                 setData(filteredData);

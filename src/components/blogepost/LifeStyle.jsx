@@ -11,7 +11,8 @@ const LifeStyle = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/bloge');
+        const response = await axios.get('personal-blogging-website-2gir.vercel.app
+/api/bloge');
         const lifestyleBlogs = response.data.filter(
           (blog) => blog.category.toLowerCase() === 'lifestyle'
         );

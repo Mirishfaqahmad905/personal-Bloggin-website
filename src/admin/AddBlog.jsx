@@ -18,7 +18,8 @@ const AddBlog = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/bloge/post', {
+      const response = await fetch('personal-blogging-website-2gir.vercel.app
+/bloge/post', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -9,7 +9,8 @@ const AiandmachineLearning = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/bloge');
+        const response = await axios.get('personal-blogging-website-2gir.vercel.app
+/api/bloge');
         const aiData = response.data.filter(
           (blog) => blog.category.toLowerCase() === 'ai & machine learning'
         );

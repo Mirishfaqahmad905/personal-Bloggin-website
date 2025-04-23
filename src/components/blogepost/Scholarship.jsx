@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import '../../CompCss/Scholarship.css'; // Import the CSS file
+// import '../../CompCss/Scholarship.css'; // Import the CSS file
 import { Link } from 'react-router-dom';
 
 const Scholarship = () => {

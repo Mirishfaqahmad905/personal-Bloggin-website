@@ -22,7 +22,8 @@ const ScholarshipPost = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/api/scholarships', {
+      const response = await fetch('personal-blogging-website-2gir.vercel.app
+/api/scholarships', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -8,7 +8,7 @@ const Scholarship = () => {
 
   useEffect(() => {
     axios
-      .get('personal-blogging-website-2gir.vercel.app
+      .get('https://bloge-3yc3-68bihfv1r-mir-ishfaq-ahmads-projects.vercel.app
 /get_scholarship_post')
       .then((res) => {
         setData(res.data.data); // Adjust according to API response structure

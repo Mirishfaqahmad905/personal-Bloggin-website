@@ -19,8 +19,7 @@ const Login = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch(`personal-blogging-website-2gir.vercel.app
-/api/login`, {
+      const response = await fetch(`https://bloge-3yc3-68bihfv1r-mir-ishfaq-ahmads-projects.vercel.app/api/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -28,7 +28,8 @@ const Admin = () => {
     setError("");
     setSuccess("");
     try {
-      const response = await axios.post("http://localhost:3000/api/login/admin", formData);
+      const response = await axios.post("personal-blogging-website-2gir.vercel.app
+/api/login/admin", formData);
       const { token, message } = response.data;
 
       // Save token to localStorage
